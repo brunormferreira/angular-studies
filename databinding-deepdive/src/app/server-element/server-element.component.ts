@@ -29,6 +29,12 @@ export class ServerElementComponent implements
   AfterViewChecked,
   OnDestroy,
   ViewChild {
+  descendants: boolean;
+  first: boolean;
+  read: any;
+  isViewQuery: boolean;
+  selector: any;
+  static: boolean;
   // tslint:disable-next-line: no-input-rename
   @Input('srvElement') element: {type: string, name: string, content: string};
   @Input() name: string;
