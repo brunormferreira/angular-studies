@@ -1,54 +1,56 @@
 <div class="row">
   <div class="col-xs-12">
-    <form>
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
       <div class="row">
-        <div class="">
+        <div class="col-xs-12">
           <button type="submit" class="btn btn-success">Save</button>
           <button type="button" class="btn btn-danger">Cancel</button>
         </div>
       </div>
       <div class="row">
-        <div class="com-xs-12">
+        <div class="col-xs-12">
           <div class="form-group">
             <label for="name">Name</label>
             <input
               type="text"
               id="name"
+              formControlName="name"
               class="form-control">
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="com-xs-12">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imagePath">Image URL</label>
+            <input
+              type="text"
+              id="imagePath"
+              formControlName="imagePath"
+              class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
           <img src="" class="img-responsive">
         </div>
       </div>
       <div class="row">
-        <div class="com-xs-12">
+        <div class="col-xs-12">
           <div class="form-group">
             <label for="description">Description</label>
             <textarea
               type="text"
               id="description"
               class="form-control"
+              formControlName="description"
               rows="6"></textarea>
             </div>
          </div>
       </div>
       <div class="row">
-        <div class="com-xs-12">
-          <div class="form-group">
-            <label for="description">Description</label>
-            <textarea
-              type="text"
-              id="description"
-              class="form-control"
-              rows="6"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="com-xs-12">
+        <div class="col-xs-12">
           <div class="row">
             <div class="col-xs-8">
                 <input
