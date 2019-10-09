@@ -16,8 +16,7 @@ export class AppComponent implements OnInit {
   onCreatePost(postData: { title: string; content: string }) {
     // Send Http request
     this.http
-      .post(
-        'https://ng-complete-guide-c56d3.firebaseio.com/posts.json',
+      .post('https://http-angular-demo-1bb5e.firebaseio.com/posts.json',
         postData
       )
       .subscribe(responseData => {
